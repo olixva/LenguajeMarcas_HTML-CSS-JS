@@ -5,48 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios 1</title>
+
+    <style>
+        .linea-discontinua {
+            border: 1px dashed white;
+            width: 50%;
+            margin-left: 30px;
+        }
+    </style>
 </head>
 
-<body bgcolor="green">
+<body>
     <font color="white">
-        <form align="center">
-            <p align="left">Datos del comprador:</p>
+        <form>
+            <table width="100%" height="100%" border="8" cellspacing="0" cellpadding="15" bordercolor="#B0E0E6">
+                <tr>
+                    <td bgcolor="green" align="left">
+                        <ul>
+                            <li type="none">
+                                <p>Datos del comprador</p>
+                            </li>
 
-            <table>
-                <tr>
-                    <td><label form="nombre">Nombre</label></td>
-                    <td><input name=nombre maxlength="15" pattern="[A-Za-z]{3}" type="text" placeholder="Nombre que figura en la tarjeta"
-                        size="25"></td>
+                            <li type="none">
+                                <ul>
+                                    <li type="none">
+                                        <table cellpadding="10">
+
+                                            <tr>
+                                                <td><label form="nombre">Nombre</label></td>
+                                                <td><input type="text" name=nombre maxlength="15" pattern="[A-Za-z]{3}"
+                                                        placeholder="Excribe tu nombre completo" size="25"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label form="email">Email</label></td>
+                                                <td><input type="email" name="email" autocomplete="on"
+                                                        placeholder="ejemplo@um.es" size="25"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label form="telefono">Telefono</label></td>
+                                                <td><input type="tel" name="telefono" maxlength="12"
+                                                        placeholder="Ej. +34668988888" size="25"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label form="pais">Pais</label></td>
+                                                <td><input type="text" name=nombre size="25"></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li type="none">
+                                <p>Datos de la tarjeta de credito o debito</p>
+                            </li>
+
+                            <li type="none">
+                                <ul>
+                                    <li type="none">
+                                        <table cellpadding="10">
+                                            <tr>
+                                                <td><label form="numero">Numero</label></td>
+                                                <td><input type="number" name="numero" min="0" max="999999999999"
+                                                        step="100" placeholder="Ej. 5555-6666-3333-9999"
+                                                        style="width: 195px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label form="nombre">Nombre</label></td>
+                                                <td><input type="text" name=nombre maxlength="15" pattern="[A-Za-z]{3}"
+                                                        placeholder="Nombre que figura en la tarjeta" size="25"></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="linea-discontinua" align="left"></div>
+
+                        <ul>
+                            <li type="none"><input type="submit" value="Confirmar pedido"></li>
+                        </ul>
+                    </td>
                 </tr>
-                <tr>
-                    <td><label form="email">Email</label></td>
-                    <td><input type="email" name="email" autocomplete="off" placeholder="ejemplo@um.es" size="25"></td>
-                </tr>
-                <tr>
-                    <td><label form="telefono">Nombre</label></td>
-                    <td><input type="tel" name="telefono" maxlength="12" placeholder="Ej. +34668988888" size="25"></td>
-                </tr>
-                <tr>
-                    <td><label form="pais">Pais</label></td>
-                    <td><input name=nombre type="text" size="25"></td>
-                </tr>
-                
             </table>
-
-            <form align="center">
-
-                <p align="left">Datos de la tarjeta de credito o debito:</p>
-                <label form="numero">Numero</label>
-                <input name="numero" type="number" min="0" max="999999999999" step="100"
-                    placeholder="Ej. 5555-6666-3333-9999">
-                <br>
-                <label form="nombre">Nombre</label>
-                <input name=nombre maxlength="15" pattern="[A-Za-z]{3}" type="text"
-                    placeholder="Nombre que figura en la tarjeta" size="25">
+        </form>
     </font>
-
-
-    </form>
 </body>
 
 </html>
