@@ -8,7 +8,57 @@
 <body>
     <form action="">
         <fieldset>
-            <legend>Datos personales</legend>
+            <legend>Datos personales</legend> <br>
+            <label form="nombre">Nombre</label>
+            <input type="text" name=nombre maxlength="15" size="25"> 
+            <label form="1apellido">Primer apellido:</label>
+            <input type="text" name=1apellido maxlength="15" size="25">
+            <label form="2apellido">Segundo apellido:</label>
+            <input type="text" name=2apellido maxlength="15" size="25">
+            <br> <br>
+            <label form="direccion">Direccion:</label>
+            <input type="text" name=direccion placeholder="Calle o plaza, numero o piso." maxlength="15" size="40">
+            <br> <br>
+            <label form="email">E-mail</label>
+            <input type="email" name="email" autocomplete="on" size="35">
+            <br> <br>
+            <label form="contra">Contraseña</label>
+            <input type="password" name="contra" autocomplete="on" size="25">
+            <br><br><br>
+            <label for="sexo">Sexo</label> <br>
+            <input type="radio" name="sexo" value="Varon" checked> Varon <br>
+            <input type="radio" name="sexo" value="Mujer"> Mujer <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Nivel de estudios e intereses</legend> <br>
+            <label for="estudios">Nivel de estudios</label> <br>
+            <input type="radio" name="estudios" value="Certificado Escolar" checked>Certificado Escolar<br>
+            <input type="radio" name="estudios" value="Graduado en E.S.O.">Graduado en E.S.O.<br>
+            <input type="radio" name="estudios" value="Bachiller - Formacion Profesional">Bachiller - Formacion Profesional<br>
+            <input type="radio" name="estudios" value="Diplomado">Diplomado<br>
+            <input type="radio" name="estudios" value="Licenciado o Doctorado">Licenciado o Doctorado<br>
+            <br>
+            <label for="temas">Recibir articulos sobre los siguiente temas:</label> <br>
+            <input type="checkbox" name="temas" value="Musica">Musica<br>
+            <input type="checkbox" name="temas" value="Deportes">Deportes<br>
+            <input type="checkbox" name="temas" value="Cine">CIne<br>
+            <input type="checkbox" name="temas" value="Libros">Libros<br>
+            <input type="checkbox" name="temas" value="Ciencia">Ciencia<br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Datos sobre la revista</legend>
+            <label for="frecuencia">Frecuencia con la que se recibira la revista:</label> <br> <br>
+            <select name="frecuencia">
+                <option value="Semanal">Semanal</option>
+                <option value="Quincenal">Quincenal</option>
+                <option value="Mensual">Mensual</option>
+                <option value="Trimestral">Trimestral</option>
+            </select>
+            <p>Puedes mandar sobre cualquier tema de los que tratamos. Nosotros lo valoraremos para que pueda ser publicado.</p>
+            <label for="archivoArticulo">Mandar articulo:</label> 
+            <input type="file" multiple>
         </fieldset>
     </form>
 </body>
