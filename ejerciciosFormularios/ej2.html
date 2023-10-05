@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios 2</title>
 </head>
+
 <body>
-    <form action="">
+    <form action="mailto:1645261@alu.murciaeduca.es" method="post" enctype="text/plain">
         <fieldset>
             <legend>Datos personales</legend> <br>
             <label form="nombre">Nombre</label>
-            <input type="text" name=nombre maxlength="15" size="25"> 
+            <input type="text" name=nombre maxlength="15" size="25">
             <label form="1apellido">Primer apellido:</label>
             <input type="text" name=1apellido maxlength="15" size="25">
             <label form="2apellido">Segundo apellido:</label>
@@ -35,20 +37,21 @@
             <label for="estudios">Nivel de estudios</label> <br>
             <input type="radio" name="estudios" value="Certificado Escolar" checked>Certificado Escolar<br>
             <input type="radio" name="estudios" value="Graduado en E.S.O.">Graduado en E.S.O.<br>
-            <input type="radio" name="estudios" value="Bachiller - Formacion Profesional">Bachiller - Formacion Profesional<br>
+            <input type="radio" name="estudios" value="Bachiller - Formacion Profesional">Bachiller - Formacion
+            Profesional<br>
             <input type="radio" name="estudios" value="Diplomado">Diplomado<br>
             <input type="radio" name="estudios" value="Licenciado o Doctorado">Licenciado o Doctorado<br>
             <br>
             <label for="temas">Recibir articulos sobre los siguiente temas:</label> <br>
             <input type="checkbox" name="temas" value="Musica">Musica<br>
             <input type="checkbox" name="temas" value="Deportes">Deportes<br>
-            <input type="checkbox" name="temas" value="Cine">CIne<br>
+            <input type="checkbox" name="temas" value="Cine">Cine<br>
             <input type="checkbox" name="temas" value="Libros">Libros<br>
             <input type="checkbox" name="temas" value="Ciencia">Ciencia<br>
         </fieldset>
         <br>
         <fieldset>
-            <legend>Datos sobre la revista</legend>
+            <legend>Datos sobre la revista</legend> <br>
             <label for="frecuencia">Frecuencia con la que se recibira la revista:</label> <br> <br>
             <select name="frecuencia">
                 <option value="Semanal">Semanal</option>
@@ -56,10 +59,30 @@
                 <option value="Mensual">Mensual</option>
                 <option value="Trimestral">Trimestral</option>
             </select>
-            <p>Puedes mandar sobre cualquier tema de los que tratamos. Nosotros lo valoraremos para que pueda ser publicado.</p>
-            <label for="archivoArticulo">Mandar articulo:</label> 
-            <input type="file" multiple>
+            <p>
+                Puedes mandar sobre cualquier tema de los que tratamos. Nosotros lo valoraremos para que pueda ser
+                publicado.
+            </p>
+            <label for="archivoArticulo">Mandar articulo:</label>
+            <input type="file" name="archivoArticulo" multiple>
+            <br><br>
+            <label for="opinion">Si deseas mandar simplemente una opinion o comentario escribela aqui.</label><br>
+            <textarea name="opinion" rows="5" cols="45" placeholder="Escribe tu comentario:"></textarea> <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Comenzar de nuevo</legend> <br>
+            <label for="borrar">Borrar todos los datos del formuario y volver a empezar</label>
+            <input type="reset" name="borrar" value="Borrar todo"> <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Enviar</legend> <br>
+            <label for="enviar">Enviar formulario por correo electronico: Al pulsar en el boton se abrira la pagina de
+                envio de correo: En esa pagina pulsa en enviar:</label><br>
+            <input type="submit" value="Enviar por correo">
         </fieldset>
     </form>
 </body>
+
 </html>
