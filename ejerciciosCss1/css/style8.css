@@ -1,0 +1,62 @@
+#Texto1 {
+    width: 80%;
+    float: left;
+    font-family: Verdana;
+    font-size: 150%;
+    text-align: justify;
+
+}
+
+#p_texto1 {
+    text-align: center;
+    margin-bottom: 2em;
+
+}
+
+#imagen1 {
+    width: 20%;
+    float: right;
+
+}
+
+#separacion {
+    clear: both;
+}
+
+#texto2 {
+    width: 75%;
+    float: right;
+    font-size: 200%;
+    text-align: justify;
+}
+
+#p_texto2 {
+    text-align: center;
+}
+
+#imagen2 {
+    width: 25%;
+    float: left;
+}
+
+a.boton-indice {
+    display: inline-block;
+    color: #a4fc00;
+    background-color: #292D3E;
+    border: 1px solid #a4fc00;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    /* Elimina la subrayado del enlace */
+    line-height: 32px;
+    /* Alinea el texto verticalmente en el botón */
+}
+
+a.boton-indice:active {
+    box-shadow: 0 3px 0 #a4fc00;
+    position: relative;
+    top: 3px;
+}

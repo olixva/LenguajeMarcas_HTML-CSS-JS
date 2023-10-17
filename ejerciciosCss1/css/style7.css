@@ -1,0 +1,47 @@
+#contenedor {
+    width: 80%;
+    max-width: 950px;
+}
+
+#cabecera {
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+#menu {
+    margin-bottom: 6em;
+}
+
+#menu a {
+    text-decoration: none;
+    /*Que los enlaces aparezcan sin subrayar */
+}
+
+#menu li {
+    list-style-type: none;
+    /*Quita los puntos de la lista*/
+    float: left;
+    margin: 10px;
+    /*Por fuera*/
+    padding: 0px;
+    /*Por dentro*/
+}
+
+#menu li a:hover {
+    color: black;
+}
+
+#menu li a:visited {
+    color: red;
+}
+
+#contenido {
+    background-color: grey;
+    border: 2px solid red;
+    color: white;
+}
+
+.articulo h2 {
+    font-family: Verdana;
+    color: red;
+}
