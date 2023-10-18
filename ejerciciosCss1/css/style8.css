@@ -39,6 +39,10 @@
     float: left;
 }
 
+.imagenes{
+    width: 100%;
+}
+
 a.boton-indice {
     display: inline-block;
     color: #a4fc00;

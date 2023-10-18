@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indice</title>
     <style>
-        
+        #izquierda {
+            float: left;
+            width: 50%;
+        }
+
+        #derecha {
+            float: right;
+            width: 50%;
+        }
+
         ul {
             list-style: none;
             padding: 0;
             background-image: url(recursos/fernando.jpg);
+            background-position: right;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
         li {
             display: flex;
             align-items: center;
-            margin-bottom: 1%;
+            margin-bottom: 2%;
             margin-left: 4%;
         }
 
@@ -32,29 +43,44 @@
 
         li a {
             text-decoration: none;
-            font-size: 16px;
+            font-size: 20px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: 1217D;
+            color: lime;
         }
 
-        div {
-            align-items: center;
+        h2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: blueviolet;
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="izquierda">
         <h2>Indice Ejercicios CSS:</h2>
         <ul>
-            <li><a href="ej1.html">Ejercicio 1</a></li>
-            <li><a href="ej2.html">Ejercicio 2</a></li>
-            <li><a href="ej3.html">Ejercicio 3</a></li>
-            <li><a href="ej4.html">Ejercicio 4</a></li>
-            <li><a href="ej5.html">Ejercicio 5</a></li>
-            <li><a href="ej6.html">Ejercicio 6</a></li>
-            <li><a href="ej7.html">Ejercicio 7</a></li>
-            <li><a href="ej8.html">Ejercicio 8</a></li>
+            <li><a href="ejercicios/ej1.html">Ejercicio 1 -> Estilo a textos</a></li>
+            <li><a href="ejercicios/ej2.html">Ejercicio 2 -> Estilo a textos</a></li>
+            <li><a href="ejercicios/ej3.html">Ejercicio 3 -> Enlaces</a></li>
+            <li><a href="ejercicios/ej4.html">Ejercicio 4 -> Menu</a></li>
+            <li><a href="ejercicios/ej5.html">Ejercicio 5 -> Menu con Flex</a></li>
+            <li><a href="ejercicios/ej6.html">Ejercicio 6 -> Tablas</a></li>
+            <li><a href="ejercicios/ej7.html">Ejercicio 7 -> Estilo maqueta WEB</a></li>
+            <li><a href="ejercicios/ej8.html">Ejercicio 8 -> Float</a></li>
+        </ul>
+    </div>
+
+    <div id="derecha">
+        <h2>Indice Ejercicios MODIFICADOS CSS:</h2>
+        <ul>
+            <li><a href="ejerciciosModificados/ej1M.html">Ejercicio 1 -> Estilo a textos</a></li>
+            <li><a href="ejerciciosModificados/ej2M.html">Ejercicio 2 -> Estilo a textos</a></li>
+            <li><a href="ejerciciosModificados/ej3M.html">Ejercicio 3 -> Enlaces</a></li>
+            <li><a href="ejerciciosModificados/ej4M.html">Ejercicio 4 -> Menu</a></li>
+            <li><a href="ejerciciosModificados/ej5M.html">Ejercicio 5 -> Menu con Flex</a></li>
+            <li><a href="ejerciciosModificados/ej6M.html">Ejercicio 6 -> Tablas</a></li>
+            <li><a href="ejerciciosModificados/ej7M.html">Ejercicio 7 -> Estilo maqueta WEB</a></li>
+            <li><a href="ejerciciosModificados/ej8M.html">Ejercicio 8 -> Float</a></li>
         </ul>
     </div>
 
