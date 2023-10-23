@@ -13,6 +13,11 @@
     background-color: yellow;
 }
 
+@media (max-width: 660px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
 .main {
     flex: 4;
     margin-right: 40px;

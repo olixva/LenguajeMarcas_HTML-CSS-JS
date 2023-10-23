@@ -1,0 +1,42 @@
+.layout {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-rows: 150px 40px 200px;
+    grid-template-columns: 150px auto;
+    grid-template-areas:
+        "image searcher"
+        ". menu"
+        ". content";
+}
+
+.layout>div {
+    border: 1px solid red;
+}
+
+.image {
+    grid-area: image;
+    background-image: url(https://t2.ea.ltmcdn.com/es/posts/7/9/5/razas_de_perros_franceses_23597_600_square.jpg);
+    background-size: cover;
+}
+
+.searcher {
+    grid-area: searcher;
+}
+
+.content {
+    grid-area: content;
+}
+
+.container {
+    display: flex;
+    grid-area: menu;
+}
+
+.item {
+    padding: 0.5rem 0.5rem;
+}
+
+.item:hover {
+    color: blue;
+    border-bottom: 5px solid blue;
+}

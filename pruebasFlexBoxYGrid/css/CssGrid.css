@@ -23,3 +23,32 @@ footer {
         "footer footer";
     grid-gap: 40px;
 }
+
+@media (max-width: 660px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "sidebar sidebar"
+            "footer footer";
+    }
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header nav {
+    justify-self: start;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    align-items: end; 
+}
+
+header button {
+    justify-self: end;
+}

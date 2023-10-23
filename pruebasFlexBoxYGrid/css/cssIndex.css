@@ -1,0 +1,57 @@
+.container{
+    display: grid;
+
+    grid-template-rows: 3fr 3fr 4fr;
+
+    grid-template-columns: 5fr 2fr 3fr;
+
+    grid-template-areas:
+    "ej1 ej2 ej2"
+    "ej1 ej3 ej3"
+    "ej4 ej4 ej5";
+
+    height: 100vh;
+}
+
+.boton{
+    border: 3px solid wheat;
+    margin: 5px;
+
+    position: relative;
+    top: 0;
+}
+
+.boton:hover {
+    box-shadow: 0px 0px 50px greenyellow;
+    border-color: green;
+    top: -4px;
+}
+
+.boton a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#ej1{
+    background-image: url(../resources/ej2.png);
+    background-size: cover;
+    grid-area: ej1;
+}
+
+#ej2 {
+    background-image: url(../resources/ej3.png);
+    background-size: cover;
+    grid-area: ej2;
+}
+#ej3 {
+    background-image: url(../resources/ej4.png);
+    background-size: cover;
+    grid-area: ej3;
+}
+#ej4 {
+    background-image: url(../resources/ej1.png);
+    background-size: cover;
+    grid-area: ej4;
+}
+
