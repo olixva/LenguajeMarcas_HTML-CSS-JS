@@ -16,7 +16,7 @@
 .boton{
     border: 3px solid wheat;
     margin: 5px;
-
+    border-radius: 10px;
     position: relative;
     top: 0;
 }
