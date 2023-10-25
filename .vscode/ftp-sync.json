@@ -1,0 +1,27 @@
+{
+    "remotePath": "olixva.atspace.cc",
+    "host": "olixva.atspace.cc",
+    "username": "4383171",
+    "password": "atspace123",
+    "port": 221,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}

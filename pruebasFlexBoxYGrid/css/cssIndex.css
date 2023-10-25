@@ -55,3 +55,10 @@
     grid-area: ej4;
 }
 
+#ej5 {
+    background-image: url(../resources/ej5.png);
+    background-size: cover;
+    grid-area: ej5;
+}
+
+
