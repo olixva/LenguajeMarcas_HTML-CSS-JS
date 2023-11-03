@@ -1,0 +1,38 @@
+
+.container{
+
+    text-align: center;
+
+    display: grid;
+    
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows:  1fr 1fr 3fr 1fr;
+
+    grid-template-areas: 
+    "logo logo"
+    "menu menu"
+    "leftcontent rightcontent"
+    "footer footer";
+}
+
+.logo{
+    grid-area: logo;
+
+    background-image: url("../img/logo_iescierva.jpg");
+}
+
+.menu{
+    grid-area: menu;
+}
+
+.leftcontent{
+    grid-area: leftcontent;
+}
+
+.rightcontent {
+    grid-area: rightcontent;
+}
+
+footer{
+    grid-area: footer;
+}
