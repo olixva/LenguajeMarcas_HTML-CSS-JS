@@ -1,0 +1,80 @@
+h1 {
+    font-size: 30;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+h2 {
+    font-size: 20;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+blockquote {
+    text-align: center;
+}
+
+body {
+    background-image: url(universo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    align-items: center;
+}
+
+li {
+    
+    text-align: center;
+    background-color: red;
+    width: 400px;
+
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-style: wavy;
+}
+
+li#gris {
+    background-color: blue;
+    font-size: 20;
+    width: 400px;
+
+    font-weight: bold;
+}
+
+img{
+    display: flex;
+    align-items: 50%;
+}
+
+a.boton-indice {
+    display: inline-block;
+    color: #a4fc00;
+    background-color: #292D3E;
+    border: 1px solid #a4fc00;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 32px;
+}
+
+a.boton-indice:active {
+    box-shadow: 0 3px 0 #a4fc00;
+    position: relative;
+    top: 3px;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
