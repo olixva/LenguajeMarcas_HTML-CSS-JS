@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+
+    border: 3px solid black;
+    text-align: left;
+    padding: 1%;
+    padding-top: 0%;
+    margin-top: 0%;
+    width: 40%;
+    height: 60%;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 24;
+    letter-spacing: 0.3em;
+    background-color: lightgray;
+
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+h1 span {
+    display: block;
+}
+
+.yearInformation {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "year info";
+    margin-left: 2%;
+}
+
+.yearInformation b{
+    grid-area: year;
+    align-self: center;
+}
+
+.yearInformation p{
+    grid-area: info;
+    align-self: center;
+}
+
+h2 {
+    font-family: Georgia;
+    color: darkred;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
