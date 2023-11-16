@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba JS 1</title>
+
+    <script>
+        function creaEnlace() {
+            let body = document.getElementsByTagName('body')[0];
+
+            let nuevoEnlace = document.createElement('a');
+            let textoEnlace = document.createTextNode('Instagram');
+
+            nuevoEnlace.appendChild(textoEnlace);
+            body.appendChild(nuevoEnlace);
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 id="Hola" onmouseover="this.style.color='blue'">Hola</h1>
+    <p onclick="creaEnlace();" onmouseover="document.getElementById('Hola'.style.color='blue')">Un párrafo de texto</p>
+    <input type="button" value="Pinchame y verás" onclick="alert('Gracias por pinchar');" />
+</body>
+
+</html>

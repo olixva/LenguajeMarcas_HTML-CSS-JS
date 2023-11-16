@@ -1,0 +1,43 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 7 - Factorial de un número entero</title>
+
+    <script type="text/javascript">
+
+        function calcularFactorial() {
+            var numero = document.getElementById('numerito').value
+            var resultado = 1;
+
+            //Calculamos factorial
+            for (var i = 1; i <= numero; i++) {
+                resultado *= i;
+            }
+            document.getElementById('p1').innerHTML = "Valor del factorial del numero: " + numero + " es: " + resultado;
+
+        }
+
+        function calcularParInpar() {
+            var numero = document.getElementById('numerito').value
+            
+            //Vemos si es par o impar
+            if ((numero % 2) == 0) {
+                document.getElementById('p2').innerHTML = "El numero es: PAR";
+            } else {
+                document.getElementById('p2').innerHTML = "El numero es: INPAR";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p id="p1">Valor del factorial del numero:</p>
+    <input type="number" name="numerito" id="numerito">
+    <button onclick="calcularFactorial(), calcularParInpar()">Calcular factorial</button>
+    <p id="p2">El numero es:</pid>
+</body>
+
+</html>
