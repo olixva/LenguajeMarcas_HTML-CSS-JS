@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de 23</title>
+
+    <script>
+        function calcularMultiplos() {
+            var numeros = ""
+            var suma = 0
+
+            for (let index = 23; index < 1000; index += 23) {
+                numeros += index + " "
+                suma += index
+            }
+
+            document.getElementById('h4').innerHTML += numeros
+            document.getElementById('suma').innerHTML += suma
+        }
+
+    </script>
+</head>
+
+<body onload="calcularMultiplos()" style="text-align: center;">
+    <h1>Calculadora de Multiplos de 23</h1>
+    <h4 id="h4">Multiplos: </h4>
+    <h5 id="suma">La suma es: </h5>
+</body>
+
+</html>

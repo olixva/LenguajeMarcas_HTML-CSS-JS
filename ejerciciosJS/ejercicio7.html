@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolver Ecuación de 2do Grado</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(45deg, #FFD700, #FF8C00, #DC143C, #9400D3, #4B0082, #00CED1, #008000);
+        }
+
+        h1 {
+            color: #FFD700;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 3em;
+            letter-spacing: 2px;
+            animation: rainbowText 2s infinite;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transform: scale(0.8);
+            opacity: 0;
+            animation: fadeInScale 1s forwards ease-in-out;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 50px;
+        }
+
+        form:hover {
+            transform: scale(0.9);
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            width: 80%;
+            font-size: 18px;
+            transition: border 0.3s ease-in-out, transform 0.5s ease-in-out;
+            animation: pulse 1s infinite;
+        }
+
+        input:focus {
+            border: 2px solid #FFD700;
+            outline: none;
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 14px 28px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease-in-out;
+            animation: rainbowButton 2s infinite, rotateOnClick 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #FFA500;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            opacity: 0;
+            animation: fadeInTranslate 1s forwards ease-in-out;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+            opacity: 0;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInScale {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInTranslate {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateOnClick {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rainbowText {
+            0% {
+                color: #FFD700;
+            }
+
+            16% {
+                color: #FF8C00;
+            }
+
+            33% {
+                color: #DC143C;
+            }
+
+            50% {
+                color: #9400D3;
+            }
+
+            67% {
+                color: #4B0082;
+            }
+
+            84% {
+                color: #00CED1;
+            }
+
+            100% {
+                color: #008000;
+            }
+        }
+
+        @keyframes rainbowButton {
+            0% {
+                background-color: #FFD700;
+            }
+
+            16% {
+                background-color: #FF8C00;
+            }
+
+            33% {
+                background-color: #DC143C;
+            }
+
+            50% {
+                background-color: #9400D3;
+            }
+
+            67% {
+                background-color: #4B0082;
+            }
+
+            84% {
+                background-color: #00CED1;
+            }
+
+            100% {
+                background-color: #008000;
+            }
+        }
+
+        @keyframes fallingNumbers {
+            0% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(720deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        @keyframes vibration {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(5px);
+            }
+
+            50% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(3px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Resolver Ecuación de 2do Grado</h1>
+
+    <form id="ecuacionForm">
+        <label for="a">Coeficiente a:</label>
+        <input type="number" id="a" required>
+        <br>
+
+        <label for="b">Coeficiente b:</label>
+        <input type="number" id="b" required>
+        <br>
+
+        <label for="c">Coeficiente c:</label>
+        <input type="number" id="c" required>
+        <br>
+
+        <button type="button" onclick="resolverEcuacion()">Resolver</button>
+    </form>
+
+    <div id="resultado" onclick="vibrateScreen()"></div>
+
+    <script>
+        function resolverEcuacion() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+
+            var discriminante = b * b - 4 * a * c;
+
+            var solucion1, solucion2;
+
+            if (discriminante >= 0) {
+                solucion1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                solucion2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            } else {
+                document.getElementById('resultado').innerHTML = "<p class='error'>No hay soluciones reales.</p>";
+                return;
+            }
+
+            // Llamamos a la función de animación después de establecer el resultado
+            animateResults(solucion1, solucion2);
+        }
+
+        function animateResults(solucion1, solucion2) {
+            var resultContainer = document.getElementById('resultado');
+
+            // Creamos elementos <p> para cada resultado
+            var result1 = document.createElement('p');
+            var result2 = document.createElement('p');
+
+            // Establecemos la clase para el estilo
+            result1.className = 'result';
+            result2.className = 'result';
+
+            // Añadimos los elementos al contenedor
+            resultContainer.appendChild(result1);
+            resultContainer.appendChild(result2);
+
+            // Asignamos los valores a los elementos
+            result1.textContent = `Solución 1: `;
+            result2.textContent = `Solución 2: `;
+
+            // Inicializamos la animación
+            result1.style.animation = `fallingNumbers 1s ease-in-out 0.5s forwards`;
+            result2.style.animation = `fallingNumbers 1s ease-in-out 1s forwards`;
+
+            // Agregamos los números de las soluciones
+            var number1 = document.createElement('span');
+            var number2 = document.createElement('span');
+            number1.textContent = solucion1.toFixed(2);
+            number2.textContent = solucion2.toFixed(2);
+            result1.appendChild(number1);
+            result2.appendChild(number2);
+        }
+
+        function vibrateScreen() {
+            var resultContainer = document.getElementById('resultado');
+            resultContainer.style.animation = 'vibration 0.5s ease-in-out';
+
+            // Reiniciamos la animación después de un breve retraso
+            setTimeout(function () {
+                resultContainer.style.animation = '';
+            }, 500);
+        }
+    </script>
+
+</body>
+
+</html>

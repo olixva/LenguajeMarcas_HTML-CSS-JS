@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Imagenes</title>
+
+    <script>
+        function actualizarImagen() {
+            //Obtenemos el menu y la imagen
+            var menu = document.getElementById('menu')
+            var imagen = document.getElementById('img')
+
+            
+            var opcionSeleccionada = menu.options[menu.selectedIndex].value;
+
+            switch (opcionSeleccionada) {
+                case "alonsoSexo":
+                    imagen.src = "imagenes/alonsoSexo.jpg_large"
+                    break;
+
+                case "alonsoGuapo":
+                    imagen.src = "imagenes/98.jpg"
+                    break;
+
+                case "flor":
+                    imagen.src = "imagenes/loto.jpg"
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <h1>Menú con Imágenes</h1> <br>
+    <select id="menu" onchange="actualizarImagen()">
+        <option value="alonsoSexo">Alonso Sexo</option>
+        <option value="alonsoGuapo">Alonso Guapo</option>
+        <option value="flor">Flor</option> <br>
+    </select><br><br>
+    
+    <img src="imagenes/alonsoSexo.jpg_large" alt="" id="img" style="height: 500px; width: 500px;">
+
+</body>
+
+</html>

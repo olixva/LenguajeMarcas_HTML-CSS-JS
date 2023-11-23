@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de días vividos</title>
+
+    <script>
+        function calcularDiasVividos(event) {
+            event.preventDefault();
+
+            // Obtenemos los valores del formulario
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+
+            var dias = edad * 365;
+
+            // Obtenemos el body y el elemento h3 existente
+            var body = document.getElementById('body');
+            var resultado = document.getElementById('resultado');
+
+            // Si el elemento h3 ya existe, actualizamos su contenido
+            if (resultado) {
+                resultado.textContent = "Hola " + nombre + ", has vivido durante " + dias + " días";
+            } else {
+                // Si no existe, creamos un nuevo elemento h3 y lo agregamos al body
+                resultado = document.createElement('h3');
+                resultado.id = 'resultado';
+                resultado.textContent = "Hola " + nombre + ", has vivido durante " + dias + " días";
+                body.appendChild(resultado);
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center;" id="body">
+    <form action="" onsubmit="calcularDiasVividos(event)">
+        <h1>Calculadora de días vividos</h1>
+        <br><label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" placeholder="Introduce tu nombre"><br><br>
+        <label for="edad">Edad: </label>
+        <input type="number" id="edad" placeholder="Introduce tu edad"><br><br>
+        <input type="submit" id="envio"><br>
+    </form>
+</body>
+
+</html>
