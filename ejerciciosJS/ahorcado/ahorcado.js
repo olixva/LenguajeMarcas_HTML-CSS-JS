@@ -1,4 +1,5 @@
 var vidas = 7;
+var letrasEncontradas = 0;
 var letras = document.getElementsByClassName("letra");
 var imagen;
 var letrasElegidas = [];
@@ -78,7 +79,12 @@ function enviarLetra() {
       var letra = document.createTextNode(letraElegida);
       letras[index].appendChild(letra);
       letraEncontrada = true;
+      letrasEncontradas++;
 
+      if (letrasEncontradas == 8) {
+        imagen.src = "imagenesAhorcado/ganado.gif";
+        return;
+      }
     }
   }
 
