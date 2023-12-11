@@ -35,13 +35,13 @@
 </head>
 
 <body style="text-align: center;" id="body">
-    <form action="" onsubmit="calcularDiasVividos(event)">
+    <form action="" >
         <h1>Calculadora de días vividos</h1>
         <br><label for="nombre">Nombre: </label>
         <input type="text" id="nombre" placeholder="Introduce tu nombre"><br><br>
         <label for="edad">Edad: </label>
         <input type="number" id="edad" placeholder="Introduce tu edad"><br><br>
-        <input type="submit" id="envio"><br>
+        <input type="button" id="envio" onclick="calcularDiasVividos(event)" value="Enviar"><br>
     </form>
 </body>
 
