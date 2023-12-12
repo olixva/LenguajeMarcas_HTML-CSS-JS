@@ -1,0 +1,98 @@
+.container{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 15fr;
+    grid-template-areas: 
+    "newsbar newsbar newsbar newsbar"
+    "tittlebar tittlebar tittlebar tittlebar"
+    "navbar navbar navbar navbar"
+    "leftaside content rightcontent rightaside";
+}
+
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 8fr;
+        grid-template-areas: 
+        "tittlebar"
+        "navbar"
+        "content";
+    }
+}
+.newsbar{
+    grid-area: newsbar;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.tittlebar{
+    grid-area: tittlebar;
+    border: 1px solid black;
+    background-color: whitesmoke;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "media logo login"
+    "media logo registro";
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.media{
+    grid-area: media;
+    border: 1px solid black;
+    background-color: rgb(151, 81, 81);
+}
+
+.logo{
+    grid-area: logo;
+    border: 1px solid black;
+    background-color: red;
+}
+
+.login{
+    grid-area: login;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.registro{
+    grid-area: registro;
+    border: 1px solid black;
+    background-color: purple;
+}
+
+.navbar{
+    grid-area: navbar;
+    border: 1px solid black;
+    background-color: purple;
+}
+
+.leftaside{
+    grid-area: leftaside;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.content{
+    grid-area: content;
+    border: 1px solid black;
+    background-color: green;
+}
+
+.rightcontent{
+    grid-area: rightcontent;
+    border: 1px solid black;
+    background-color: brown;
+}
+
+.rightaside{
+    grid-area: rightaside;
+    border: 1px solid black;
+    background-color: white;
+}
