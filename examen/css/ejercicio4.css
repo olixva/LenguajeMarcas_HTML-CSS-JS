@@ -6,6 +6,7 @@ body {
     text-align: center;
 }
 
+
 #imagenesContainer {
     display: flex;
     flex-direction: row;
@@ -13,34 +14,34 @@ body {
     align-items: center;
 }
 
-.imagen{
+.imagen {
     background-size: cover;
     background-position: center;
     margin: 3%;
+
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
 }
 
-#google{
+.imagen:hover {
+    transform: scale(0.5);
+}
+
+#google {
     background-image: url(../img/google.jpg);
-    width: 100px;
-    height: 100px;
 }
 
-#yahoo{
+#yahoo {
     background-image: url(../img/yahoo.png);
-    width: 100px;
-    height: 100px;
 }
 
-#bing{
+#bing {
     background-image: url(../img/bing.png);
-    width: 100px;
-    height: 100px;
 }
 
-#ask{
+#ask {
     background-image: url(../img/ask.png);
-    width: 100px;
-    height: 100px;
 }
 
 .imagen a {
@@ -69,4 +70,3 @@ a.boton-indice:active {
     position: relative;
     top: 3px;
 }
-

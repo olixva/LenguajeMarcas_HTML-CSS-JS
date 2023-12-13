@@ -1,9 +1,12 @@
 var aumentadas = false;
 
+/*
+Alternativa a usar el #hover en css para cambiar el tamaño de las imagenes
+
 function reducirMitad(nombre) {
   imagen = document.getElementById(nombre);
 
-  if (imagen.dataset.tamano == "grande") {
+  if (aumentadas) {
     imagen.style.width = "100px";
     imagen.style.height = "100px";
   } else {
@@ -15,7 +18,7 @@ function reducirMitad(nombre) {
 function aumentarDoble(nombre) {
   imagen = document.getElementById(nombre);
 
-  if (imagen.dataset.tamano == "grande") {
+  if (aumentadas) {
     imagen.style.width = "200px";
     imagen.style.height = "200px";
   } else {
@@ -23,6 +26,7 @@ function aumentarDoble(nombre) {
     imagen.style.height = "100px";
   }
 }
+*/
 
 function aumentarReducir() {
   let imagenes = document.getElementsByClassName("imagen");
@@ -32,7 +36,6 @@ function aumentarReducir() {
     for (imagen of imagenes) {
       imagen.style.width = "200px";
       imagen.style.height = "200px";
-      imagen.dataset.tamano = "grande";
     }
     mensaje.innerHTML = "Reducir";
     aumentadas = true;
@@ -40,7 +43,6 @@ function aumentarReducir() {
     for (imagen of imagenes) {
       imagen.style.width = "100px";
       imagen.style.height = "100px";
-      imagen.dataset.tamano = "normal";
     }
     mensaje.innerHTML = "Aumentar";
     aumentadas = false;
