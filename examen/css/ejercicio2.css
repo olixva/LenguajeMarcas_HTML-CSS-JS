@@ -1,0 +1,20 @@
+a.boton-indice {
+    display: inline-block;
+    color: #a4fc00;
+    background-color: #292D3E;
+    border: 1px solid #a4fc00;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 32px;
+    text-align: center;
+}
+
+a.boton-indice:active {
+    box-shadow: 0 3px 0 #a4fc00;
+    position: relative;
+    top: 3px;
+}

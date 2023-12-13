@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#imagenesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen{
+    background-size: cover;
+    background-position: center;
+    margin: 3%;
+}
+
+#google{
+    background-image: url(../img/google.jpg);
+    width: 100px;
+    height: 100px;
+}
+
+#yahoo{
+    background-image: url(../img/yahoo.png);
+    width: 100px;
+    height: 100px;
+}
+
+#bing{
+    background-image: url(../img/bing.png);
+    width: 100px;
+    height: 100px;
+}
+
+#ask{
+    background-image: url(../img/ask.png);
+    width: 100px;
+    height: 100px;
+}
+
+.imagen a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+a.boton-indice {
+    display: inline-block;
+    color: #a4fc00;
+    background-color: #292D3E;
+    border: 1px solid #a4fc00;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 32px;
+    text-align: center;
+}
+
+a.boton-indice:active {
+    box-shadow: 0 3px 0 #a4fc00;
+    position: relative;
+    top: 3px;
+}
+

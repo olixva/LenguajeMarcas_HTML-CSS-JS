@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+
+    grid-template-rows: 3fr 4fr;
+
+    grid-template-columns: 5fr 3fr;
+
+    grid-template-areas:
+        "ej1 ej2"
+        "ej4 ej3";
+
+    height: 100vh;
+}
+
+.boton {
+    border: 3px solid wheat;
+    margin: 5px;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+
+    transition: all 500ms;
+}
+
+.boton:hover {
+    box-shadow: 0px 0px 50px greenyellow;
+    border-color: green;
+    top: -4px;
+}
+
+.boton a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#ej1 {
+    background-image: url(img/ej1.png);
+    background-size: cover;
+    grid-area: ej1;
+}
+
+#ej2 {
+    background-image: url(img/ej2.png);
+    background-size: cover;
+    grid-area: ej2;
+}
+
+#ej3 {
+    background-image: url(img/ej3.png);
+    background-size: cover;
+    grid-area: ej3;
+}
+
+#ej4 {
+    background-image: url(img/ej4.png);
+    background-size: cover;
+    grid-area: ej4;
+}
+
